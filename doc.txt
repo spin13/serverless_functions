@@ -1,0 +1,13 @@
+http://qiita.com/tsuyopooon/items/690e258435a5bdcb06c6
+http://dev.classmethod.jp/cloud/aws/easy-deploy-of-lambda-with-serverless-framework/
+http://qiita.com/susieyy/items/1c2af0ef7b88b742c37a
+
+[1]
+$ sls create -t aws-python3 -p testfunc
+"aws-nodejs", "aws-python", "aws-python3", "aws-groovy-gradle", "aws-java-maven", "aws-java-gradle", "aws-scala-sbt", "aws-csharp", "azure-nodejs", "openwhisk-nodejs", "openwhisk-python", "openwhisk-swift", "google-nodejs", "plugin" and "hello-world
+
+[2]
+$ sls deploy
+
+[3]
+$ curl https://xxxxxxxxxxxxx.execute-api.ap-northeast-1.amazonaws.com/dev/users/create --header 'x-api-key:yourkey'
