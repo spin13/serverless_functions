@@ -1,0 +1,12 @@
+[submodule "apiFunctions/slack"]
+	path = apiFunctions/slack
+	url = git@github.com:spin13/slack.git
+[submodule "apiFunctions/flickr"]
+	path = apiFunctions/flickr
+	url = git@github.com:spin13/flickr.git
+[submodule "nyarn/slack"]
+	path = nyar/slack
+	url = git@github.com:spin13/slack.git
+[submodule "nyar/flickr"]
+	path = nyarn/flickr
+	url = git@github.com:spin13/flickr.git

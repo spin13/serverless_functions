@@ -1,4 +1,4 @@
-service: baseFunc
+service: apiFunctions
 
 provider:
   name: aws
@@ -12,10 +12,19 @@ functions:
     handler: handler.hello
 
     events:
-      # 2時間ごと
-      # - schedule: rate(1 hours)
       - http:
           path: users/create
+          method: get
+          # need api key auth?
+          # if on, you need to assign apiKey using plan
+          private: true
+
+  ttest:
+    handler: handler.ttest
+
+    events:
+      - http:
+          path: slack/slk
           method: get
           # need api key auth?
           # if on, you need to assign apiKey using plan

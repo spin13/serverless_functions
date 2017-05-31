@@ -1,4 +1,4 @@
-service: baseFunc
+service: nyarn
 
 provider:
   name: aws
@@ -8,16 +8,13 @@ provider:
   memorySize: 128
 
 functions:
-  hello:
-    handler: handler.hello
-
+  nyarn:
+    handler: handler.nyarn
     events:
-      # 2時間ごと
-      # - schedule: rate(1 hours)
+      - schedule: rate(1 hour)
       - http:
-          path: users/create
+          path: nyarn
           method: get
           # need api key auth?
           # if on, you need to assign apiKey using plan
           private: true
-
