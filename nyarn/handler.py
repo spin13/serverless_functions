@@ -14,7 +14,7 @@ import flickr_api as flickr
 def nyarn(event, context):
     slack.post_slack(
         username = "nyarn",
-        channel = "#dev_null",
+        channel = env.NYARN_POST_CHANNEL,
         message = flickr.random_url()
     )
     return { "statusCode": 200, "body": json.dumps({ "body": "OK" }) }

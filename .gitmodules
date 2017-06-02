@@ -5,11 +5,14 @@
 	path = apiFunctions/flickr
 	url = git@github.com:spin13/flickr.git
 [submodule "nyarn/slack"]
-	path = nyar/slack
+	path = nyarn/slack
 	url = git@github.com:spin13/slack.git
-[submodule "nyar/flickr"]
+[submodule "nyarn/flickr"]
 	path = nyarn/flickr
 	url = git@github.com:spin13/flickr.git
 [submodule "wunderlist/wunderlist"]
 	path = wunderlist/wunderlist
 	url = git@github.com:spin13/wunderlist_api.git
+[submodule "wunderlist/slack"]
+	path = wunderlist/slack
+	url = git@github.com:spin13/slack.git

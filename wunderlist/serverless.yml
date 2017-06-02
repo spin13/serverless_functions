@@ -1,0 +1,52 @@
+service: wunderlist
+
+provider:
+  name: aws
+  runtime: python3.6
+  stage: dev
+  region: ap-northeast-1
+  memorySize: 128
+
+functions:
+  wunderlist:
+    handler: handler.wunder_list
+    events:
+      - http:
+          path: list
+          method: get
+          # need api key auth?
+          # if on, you need to assign apiKey using plan
+          private: true
+
+  expired:
+    handler: handler.expired_tasks
+    events:
+      - http:
+          path: tasks/expired
+          method: get
+          private: true
+
+  postExpired:
+    handler: handler.post_slack_expired_tasks
+    events:
+      - http:
+          path: post/expired
+          method: get
+          private: true
+
+  postWillExpire:
+    handler: handler.post_slack_will_expire_tasks
+    events:
+      - http:
+          path: post/willExpire
+          method: get
+          private: true
+
+  all:
+    handler: handler.notify_all_expire_tasks
+    events:
+      - schedule: cron(9 0 * * ? *)
+      - http:
+          path: post/all
+          method: get
+          private: true

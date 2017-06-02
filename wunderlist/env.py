@@ -1,0 +1,7 @@
+import os
+SLACK_TOKEN = os.environ.get("SLACK_TOKEN")
+APP_TOKEN = ""
+
+WUNDERLIST_CLIENT_ID = os.environ.get("WUNDERLIST_CLIENT_ID")
+WUNDERLIST_TOKEN = os.environ.get("WUNDERLIST_TOKEN")
+WUNDERLIST_PROJECTS = os.environ.get("WUNDERLIST_PROJECTS").split(",")

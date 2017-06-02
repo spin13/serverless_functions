@@ -5,3 +5,4 @@ APP_TOKEN = ""
 FLICKR_API_KEY = os.environ.get("FLICKR_API_KEY")
 FLICKR_API_BASE = os.environ.get("FLICKR_API_BASE")
 
+NYARN_POST_CHANNEL = os.environ.get("NYARN_POST_CHANNEL")
