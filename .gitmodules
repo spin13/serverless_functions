@@ -10,3 +10,6 @@
 [submodule "nyar/flickr"]
 	path = nyarn/flickr
 	url = git@github.com:spin13/flickr.git
+[submodule "wunderlist/wunderlist"]
+	path = wunderlist/wunderlist
+	url = git@github.com:spin13/wunderlist_api.git
