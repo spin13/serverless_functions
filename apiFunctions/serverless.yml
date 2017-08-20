@@ -19,14 +19,17 @@ functions:
           # if on, you need to assign apiKey using plan
           private: true
 
-  ttest:
-    handler: handler.ttest
+  slack-say:
+    handler: handler.slack_say
 
     events:
       - http:
-          path: slack/slk
+          path: slack/say
           method: get
           # need api key auth?
           # if on, you need to assign apiKey using plan
+          # parameters:
+          #   channel: slack channel
+          #   message: slack message
           private: true
 

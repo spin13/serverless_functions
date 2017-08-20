@@ -29,18 +29,32 @@ def hello(event, context):
 
     return response
 
-def ttest(event, context):
-    print("here")
-    print(env.SLACK_TOKEN)
-    slack.post_slack(username="lambda", channel="#dev_null", message="lambda test")
+def slack_say(event, context):
+    """
+    post slack to message
+
+    Args:
+        
+    """
+
+    params = get_parameters(event)
+    message = params["message"]
+    channel = params["channel"]
+
+    slack.post_slack(
+        username = "lambda",
+        channel = channel,
+        message = message
+    )
     body = {
-        "env": env.SLACK_TOKEN
+        "env": "ok"
     }
     response = {
         "statusCode": 200,
         # "body": json.dumps(body)
         "body": json.dumps(body)
     }
+
     return response
 
 # return URLQuery to dict
